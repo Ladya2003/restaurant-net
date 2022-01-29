@@ -5,7 +5,7 @@
 	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 	<head>
 		<!-- Заголовок страницы в браузере -->
-		<title>Project on OOP</title>
+		<title>Restaurant Net</title>
 		<!-- Адаптив -->
 		<meta name="viewport" content="width=device-width">
 		<!-- Подключаем CSS -->
@@ -13,6 +13,17 @@
 		<!-- Кодировка страницы -->
 		<meta charset="UTF-8">
 		<link type="image/jpg" sizes="32x32" rel="icon" href="img/nikitOSS.png">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $(".nav").on("click","a", function (event) {
+               event.preventDefault();
+               var id  = $(this).attr('href'),
+                   top = $(id).offset().top;
+               $('body,html').animate({scrollTop: top}, 1500);
+           });
+       });
+       </script>
 	</head>
 	<!-- Отображаемое тело страницы -->
 	<body>
@@ -20,9 +31,9 @@
 			<div class="container">
 				<header class="header">
 					<div class="nav">
-						<a class="restaurants" href="#">РЕСТОРАНЫ</a>
+						<a class="restaurants" href="#rest">Restaurants</a>
 						<ul>
-							<li><a class="contacts" href="#">КОНТАКТЫ</a>
+							<li><a class="contacts" href="#">Contacts</a>
 								<ul class="second">
 									<li><a href="https://www.instagram.com/mawapan/"><img src="img/insta.png">Instagram</a></li>
 									<li><a href="https://vk.com/mawapan"><img src="img/vk.png">VK</a></li>
@@ -34,8 +45,10 @@
 						<img src="img/eatloclogo.png" alt="#">
 					</div>
 				</header>
+				<hr class="hr_line">
+				<br><br><br>
 				<content class="content">
-					<h3>Выбор ресторана</h3>
+					<h3 id="rest">Choose your restaurant</h3>
 					<div class="restaurants">	
 						<div class="style rest-wrapper">
 							<a href="balcony-2.html" style="background: url('img/balcon_main.jpg');background-size: cover;" >
@@ -120,7 +133,7 @@
 							</div>
 						</div>
 					</div>
-					<h3>Последние новости</h3>
+					<h3>The Latest News</h3>
 					<div class="news">
 						<div>
 							<img class="news_photo" src="img/news_3.png" alt="">
@@ -134,9 +147,10 @@
 					</div>
 				</content>
 			</div>
+			<br><br><br><br><br><hr class="hr_line">
 			<footer class="footer">
 				<div class="footer_iner">
-					<h3>Сайт разработан &copy;<a class="meme" href="">ВЛАДООМ ВАКУЛЕНЧИКОМ ПОДПИСЫВАИТЕСЬ НА МОЙ КАНАЛ НА ЮТУБЕ И ТИКТОКЕ И ИНТСАГРАМ, ИНСТАСАМОЧКИ ЗВОНИТЕ ПО НОМЕРУ +375291131281</a></h3>
+					<h3>Web-Site made by <a class="meme" href="https://vk.com/itsvladiatorbeach">&copy;Vladislav Vakulenchik</a></h3>
 				</div>
 			</footer>
 		</div>
